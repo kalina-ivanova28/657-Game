@@ -1140,7 +1140,9 @@ PlayableDirector:
   m_WrapMode: 2
   m_DirectorUpdateMode: 1
   m_InitialTime: 0
-  m_SceneBindings: []
+  m_SceneBindings:
+  - key: {fileID: -8836346175754625419, guid: 8a35f5fe329f79a498b082727398b4c0, type: 2}
+    value: {fileID: 1364562361}
   m_ExposedReferences:
     m_References: []
 --- !u!1 &1087100418
@@ -1619,7 +1621,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1364562356}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.9, y: 1, z: -102.34}
+  m_LocalPosition: {x: 8.9, y: 1, z: -102.2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1640,7 +1642,7 @@ Animator:
   m_GameObject: {fileID: 1364562356}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 8624cc6628b48e344a8394c48cb83f8e, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -1659,13 +1661,19 @@ PlayableDirector:
   m_GameObject: {fileID: 1364562356}
   m_Enabled: 1
   serializedVersion: 3
-  m_PlayableAsset: {fileID: 11400000, guid: 5e20adf67b46cd54b8a953fe5dffc996, type: 2}
+  m_PlayableAsset: {fileID: 11400000, guid: 3ff0d4d8afa078a4d82db2f5d3cf08f6, type: 2}
   m_InitialState: 1
   m_WrapMode: 2
   m_DirectorUpdateMode: 1
   m_InitialTime: 0
   m_SceneBindings:
   - key: {fileID: -2706594181068431273, guid: 5e20adf67b46cd54b8a953fe5dffc996, type: 2}
+    value: {fileID: 1364562361}
+  - key: {fileID: 3700744399104165378, guid: 69096e05db5e9d54999b643b6cd16aba, type: 2}
+    value: {fileID: 1364562361}
+  - key: {fileID: 0}
+    value: {fileID: 1364562361}
+  - key: {fileID: -1334461039706045193, guid: 3ff0d4d8afa078a4d82db2f5d3cf08f6, type: 2}
     value: {fileID: 1364562361}
   m_ExposedReferences:
     m_References: []
