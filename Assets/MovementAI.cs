@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.SceneManagement;
 
 public class MovementAI : MonoBehaviour
 {
@@ -33,21 +34,24 @@ public class MovementAI : MonoBehaviour
             }
             else
             {
-                //while (!Input.anyKey)
-                //{
                     if (Input.GetKeyDown(KeyCode.Alpha1))
                     {
                         waypointIndex = 4;
                         IterateWaypointIndex();
                         UpdateDestination();
+                        if (waypointIndex == 5){
+                            SceneManager.LoadScene("GameOverScene");
+                        }
                     }
                     else if (Input.GetKeyDown(KeyCode.Alpha2))
                     {
                         waypointIndex = 6;
                         IterateWaypointIndex();
                         UpdateDestination();
+                        if (waypointIndex == 7){
+                            SceneManager.LoadScene("WinScene");
+                        }
                     }
-                //}
             }
         }
     }
