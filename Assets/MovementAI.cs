@@ -9,6 +9,7 @@ public class MovementAI : MonoBehaviour
     NavMeshAgent agent;
 
     public Transform[] waypoints;   //array of waypoints
+
     int waypointIndex;  //index for choosing the waypoints
     Vector3 target;
 
@@ -25,8 +26,29 @@ public class MovementAI : MonoBehaviour
     {
         if(Vector3.Distance(transform.position,target) < 1) //if our distance to the target is less than 1 meter,
         {
-            IterateWaypointIndex();         //we are going to increase the waypoint index by 1
-            UpdateDestination();            //updates the destination waypoint
+            if (waypointIndex < 3)
+            {
+                IterateWaypointIndex();         //we are going to increase the waypoint index by 1
+                UpdateDestination();            //updates the destination waypoint
+            }
+            else
+            {
+                //while (!Input.anyKey)
+                //{
+                    if (Input.GetKeyDown(KeyCode.Alpha1))
+                    {
+                        waypointIndex = 4;
+                        IterateWaypointIndex();
+                        UpdateDestination();
+                    }
+                    else if (Input.GetKeyDown(KeyCode.Alpha2))
+                    {
+                        waypointIndex = 6;
+                        IterateWaypointIndex();
+                        UpdateDestination();
+                    }
+                //}
+            }
         }
     }
 
@@ -40,9 +62,9 @@ public class MovementAI : MonoBehaviour
     void IterateWaypointIndex()
     {
         waypointIndex++;
-        if(waypointIndex == waypoints.Length)      //if the waypoint index is equal the number of waypoints we have,
-        {
-            waypointIndex = 0;                    //it will reset back to 0
-        }
+      
     }
 }
+
+
+
