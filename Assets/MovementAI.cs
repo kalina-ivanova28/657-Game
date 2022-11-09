@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+
 
 public class MovementAI : MonoBehaviour
 {
@@ -13,6 +15,7 @@ public class MovementAI : MonoBehaviour
 
     int waypointIndex;  //index for choosing the waypoints
     Vector3 target;
+    // public Text test;
 
     // Start is called before the first frame update
     void Start()
@@ -27,10 +30,14 @@ public class MovementAI : MonoBehaviour
     {
         if(Vector3.Distance(transform.position,target) < 1) //if our distance to the target is less than 1 meter,
         {
+            //test.text="";
             if (waypointIndex < 3)
             {
                 IterateWaypointIndex();         //we are going to increase the waypoint index by 1
                 UpdateDestination();            //updates the destination waypoint
+                if (waypointIndex == 4){
+                    //test.text="Make your choice quick!";
+                }
             }
             else
             {
