@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI;
+using TMPro;
 
 
 public class MovementAI : MonoBehaviour
@@ -15,11 +15,24 @@ public class MovementAI : MonoBehaviour
 
     int waypointIndex;  //index for choosing the waypoints
     Vector3 target;
-    // public Text test;
+    //Creating the game objects
+    public GameObject click;
+    public GameObject instructions;
+
+    //Creating the string values
+    public string click_value;
+    public string instructions_value;
+    public string empty;
+
+    //Text Components
+    TextMeshProUGUI textMeshPro_click;
+    TextMeshProUGUI textMeshPro_instructions;
 
     // Start is called before the first frame update
     void Start()
     {
+        textMeshPro_click = click.GetComponent<TextMeshProUGUI>();
+        textMeshPro_instructions = instructions.GetComponent<TextMeshProUGUI>();
         agent = GetComponent<NavMeshAgent>();
         UpdateDestination(); 
         
@@ -30,19 +43,21 @@ public class MovementAI : MonoBehaviour
     {
         if(Vector3.Distance(transform.position,target) < 1) //if our distance to the target is less than 1 meter,
         {
-            //test.text="";
+            
             if (waypointIndex < 3)
             {
                 IterateWaypointIndex();         //we are going to increase the waypoint index by 1
                 UpdateDestination();            //updates the destination waypoint
-                if (waypointIndex == 4){
-                    //test.text="Make your choice quick!";
-                }
+                
             }
             else
             {
+                    textMeshPro_click.text = click_value;
+                    textMeshPro_instructions.text = instructions_value;
                     if (Input.GetKeyDown(KeyCode.Alpha1))
                     {
+                        textMeshPro_click.text = empty;
+                        textMeshPro_instructions.text = empty;
                         waypointIndex = 4;
                         IterateWaypointIndex();
                         UpdateDestination();
@@ -52,6 +67,8 @@ public class MovementAI : MonoBehaviour
                     }
                     else if (Input.GetKeyDown(KeyCode.Alpha2))
                     {
+                        textMeshPro_click.text = empty;
+                        textMeshPro_instructions.text = empty;
                         waypointIndex = 6;
                         IterateWaypointIndex();
                         UpdateDestination();
