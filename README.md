@@ -8,3 +8,6 @@ https://www.youtube.com/watch?v=r2TB_6zIxvY
 
 Making the character move:
 https://www.youtube.com/watch?v=c8Nq19gkNfs
+
+Cutscenes:
+https://www.youtube.com/watch?v=Zb5GxSz5mSI&t=236s
