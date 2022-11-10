@@ -13,8 +13,12 @@ Cutscenes:
 https://www.youtube.com/watch?v=Zb5GxSz5mSI&t=236s
 
 
+
+
 Play Instructions:
 
 Player Movement: N/A, player movement is automated
+
 Camera Movement: Trackpad
+
 Option Select: 1 / 2 on keyboard
