@@ -61,9 +61,9 @@ public class MovementAI : MonoBehaviour
                         waypointIndex = 4;
                         IterateWaypointIndex();
                         UpdateDestination();
-                        if (waypointIndex == 5){
-                            SceneManager.LoadScene("GameOverScene");
-                        }
+                        //if (waypointIndex == 5){
+                          //  SceneManager.LoadScene("GameOverScene");
+                        //}
                     }
                     else if (Input.GetKeyDown(KeyCode.Alpha2))
                     {
@@ -72,9 +72,9 @@ public class MovementAI : MonoBehaviour
                         waypointIndex = 6;
                         IterateWaypointIndex();
                         UpdateDestination();
-                        if (waypointIndex == 7){
-                            SceneManager.LoadScene("WinScene");
-                        }
+                        //if (waypointIndex == 7){
+                        //    SceneManager.LoadScene("WinScene");
+                        //}
                     }
             }
         }

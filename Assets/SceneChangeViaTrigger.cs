@@ -9,6 +9,7 @@ public class SceneChangeViaTrigger : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        Debug.Log("triggered");
         SceneManager.LoadScene(3);
     }
 }
