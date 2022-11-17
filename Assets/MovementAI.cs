@@ -83,9 +83,10 @@ public class MovementAI : MonoBehaviour
 
     void UpdateDestination()
     {
-        //target = waypoints[waypointIndex].position; //set our target to our current waypoint
+        target = waypoints[waypointIndex].position; //set our target to our current waypoint
 
-        target = Vector2.MoveTowards(transform.position, waypoints[waypointIndex].position, Time.deltaTime * 10); //set our target to our current waypoint
+        //target = Vector2.MoveTowards(transform.position, waypoints[waypointIndex].position, Time.deltaTime * 10); //set our target to our current waypoint
+
         agent.SetDestination(target);               //set the nav mesh agent's destination to target
     }
 
