@@ -53,7 +53,7 @@ public class MovementAI : MonoBehaviour
                 UpdateDestination();            //updates the destination waypoint
                 
             }
-            else
+            else if(waypointIndex == 3)
             {
                     textMeshPro_click.text = click_value;
                     textMeshPro_instructions.text = instructions_value;
@@ -64,20 +64,56 @@ public class MovementAI : MonoBehaviour
                         waypointIndex = 4;
                         IterateWaypointIndex();
                         UpdateDestination();
-                        //if (waypointIndex == 5){
-                          //  SceneManager.LoadScene("GameOverScene");
-                        //}
                     }
                     else if (Input.GetKeyDown(KeyCode.Alpha2))
                     {
                         textMeshPro_click.text = empty;
                         textMeshPro_instructions.text = empty;
-                        waypointIndex = 6;
+                        waypointIndex = 13;
                         IterateWaypointIndex();
                         UpdateDestination();
-                        //if (waypointIndex == 7){
-                        //    SceneManager.LoadScene("WinScene");
-                        //}
+                    }
+            }
+            else if(waypointIndex == 4)
+            {
+                
+                    textMeshPro_click.text = click_value;
+                    textMeshPro_instructions.text = instructions_value;
+                    if (Input.GetKeyDown(KeyCode.Alpha1))
+                    {
+                        textMeshPro_click.text = empty;
+                        textMeshPro_instructions.text = empty;
+                        waypointIndex = 5;
+                        IterateWaypointIndex();
+                        UpdateDestination();
+                    }
+                    else if (Input.GetKeyDown(KeyCode.Alpha2))
+                    {
+                        textMeshPro_click.text = empty;
+                        textMeshPro_instructions.text = empty;
+                        waypointIndex = 8;
+                        IterateWaypointIndex();
+                        UpdateDestination();
+                    }
+            }
+            else if(waypointIndex == 9){
+                 textMeshPro_click.text = click_value;
+                    textMeshPro_instructions.text = instructions_value;
+                    if (Input.GetKeyDown(KeyCode.Alpha1))
+                    {
+                        textMeshPro_click.text = empty;
+                        textMeshPro_instructions.text = empty;
+                        waypointIndex = 10;
+                        IterateWaypointIndex();
+                        UpdateDestination();
+                    }
+                    else if (Input.GetKeyDown(KeyCode.Alpha2))
+                    {
+                        textMeshPro_click.text = empty;
+                        textMeshPro_instructions.text = empty;
+                        waypointIndex = 12;
+                        IterateWaypointIndex();
+                        UpdateDestination();
                     }
             }
         }
