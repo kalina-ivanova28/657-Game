@@ -74,7 +74,7 @@ public class MovementAI : MonoBehaviour
                         UpdateDestination();
                     }
             }
-            else if(waypointIndex == 4)
+            else if(waypointIndex == 5)
             {
                 
                     textMeshPro_click.text = click_value;
