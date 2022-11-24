@@ -96,14 +96,14 @@ public class MovementAI : MonoBehaviour
                         UpdateDestination();
                     }
             }
-            else if(waypointIndex == 9){
+            else if(waypointIndex == 10){
                  textMeshPro_click.text = click_value;
                     textMeshPro_instructions.text = instructions_value;
                     if (Input.GetKeyDown(KeyCode.Alpha1))
                     {
                         textMeshPro_click.text = empty;
                         textMeshPro_instructions.text = empty;
-                        waypointIndex = 10;
+                        waypointIndex = 11;
                         IterateWaypointIndex();
                         UpdateDestination();
                     }
@@ -111,7 +111,7 @@ public class MovementAI : MonoBehaviour
                     {
                         textMeshPro_click.text = empty;
                         textMeshPro_instructions.text = empty;
-                        waypointIndex = 12;
+                        waypointIndex = 13;
                         IterateWaypointIndex();
                         UpdateDestination();
                     }
