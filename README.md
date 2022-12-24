@@ -1,8 +1,11 @@
 # 657-Game
 
+Link to game (WebGL):
 https://kalina-ivanova28.github.io/657-Game/Build/index.html 
 
+#################################################################################################
 References:
+#################################################################################################
 Making text appear:
 https://www.youtube.com/watch?v=r2TB_6zIxvY
 
@@ -12,10 +15,24 @@ https://www.youtube.com/watch?v=c8Nq19gkNfs
 Cutscenes:
 https://www.youtube.com/watch?v=Zb5GxSz5mSI&t=236s
 
+#################################################################################################
+Assets used:
+#################################################################################################
+Gun/Weapon props:
+https://assetstore.unity.com/packages/3d/props/guns/guns-pack-low-poly-guns-collection-192553
+
+Skybox materials:
+https://assetstore.unity.com/packages/2d/textures-materials/sky/skybox-series-free-103633#description 
 
 
+#################################################################################################
+Assets self-created:
+#################################################################################################
+- Car Model using Blender
 
+#################################################################################################
 Play Instructions:
+#################################################################################################
 
 Player Movement: N/A, player movement is automated
 
