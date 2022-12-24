@@ -29,7 +29,7 @@ Location: Abandoned Asylum Building
 
 Character: Streamer (1st Person from the live stream point of view)
 
-Movement: Character moving on their own, but can rotate the camera with the flashlight(left, right, up, down keys/ WSAD keys)
+Movement: Character moving on their own, but can rotate the camera with the weapon (mouse movement)
 
 GameStory/Gameplay:
 Drives up to the asylum (cut scene) and the streamer gets out of the car. In the car he explains backstory - looking for a lost object/artefact. 
