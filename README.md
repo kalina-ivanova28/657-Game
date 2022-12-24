@@ -1,5 +1,8 @@
 # 657-Game
 
+Project Pathway: Explorers #Pathway 2
+Game Concept: Puzzle #Game Concept 4
+
 Link to game (WebGL):
 https://kalina-ivanova28.github.io/657-Game/Build/index.html 
 
