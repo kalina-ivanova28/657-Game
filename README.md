@@ -27,6 +27,8 @@ https://assetstore.unity.com/packages/3d/props/guns/guns-pack-low-poly-guns-coll
 Skybox materials:
 https://assetstore.unity.com/packages/2d/textures-materials/sky/skybox-series-free-103633#description 
 
+Terrain materials:
+https://assetstore.unity.com/packages/3d/environments/landscapes/terrain-sample-asset-pack-145808
 
 #################################################################################################
 Assets self-created:
