@@ -20,7 +20,7 @@ public class Gun : MonoBehaviour
 
     void Shoot() {
 
-        muzzleFlash.Play();
+        muzzleFlash.Play();        //plays muzzle flash every time the player left clicks
 
         RaycastHit hit;
 
