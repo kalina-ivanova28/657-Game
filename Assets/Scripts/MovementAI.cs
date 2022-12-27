@@ -47,13 +47,20 @@ public class MovementAI : MonoBehaviour
         if(Vector3.Distance(transform.position,target) < 1) //if our distance to the target is less than 1 meter,
         {
             
-            if (waypointIndex < 3)
+            if (waypointIndex < 2)
             {
                 IterateWaypointIndex();         //we are going to increase the waypoint index by 1
                 UpdateDestination();            //updates the destination waypoint
                 
             }
-            else if(waypointIndex == 3)
+            else if(waypointIndex == 2){
+                if(Input.GetKeyDown(KeyCode.Space)){
+                    waypointIndex = 3;
+                    IterateWaypointIndex();
+                    UpdateDestination();
+                }
+            }
+            else if(waypointIndex == 5)
             {
                     textMeshPro_click.text = click_value;
                     textMeshPro_instructions.text = instructions_value;
@@ -61,7 +68,7 @@ public class MovementAI : MonoBehaviour
                     {
                         textMeshPro_click.text = empty;
                         textMeshPro_instructions.text = empty;
-                        waypointIndex = 4;
+                        waypointIndex = 6;
                         IterateWaypointIndex();
                         UpdateDestination();
                     }
@@ -69,25 +76,17 @@ public class MovementAI : MonoBehaviour
                     {
                         textMeshPro_click.text = empty;
                         textMeshPro_instructions.text = empty;
-                        waypointIndex = 13;
+                        waypointIndex = 17;
                         IterateWaypointIndex();
                         UpdateDestination();
                     }
             }
-            else if(waypointIndex == 5)
+            else if(waypointIndex == 7)
             {
                 
                     textMeshPro_click.text = click_value;
                     textMeshPro_instructions.text = instructions_value;
                     if (Input.GetKeyDown(KeyCode.Alpha1))
-                    {
-                        textMeshPro_click.text = empty;
-                        textMeshPro_instructions.text = empty;
-                        waypointIndex = 5;
-                        IterateWaypointIndex();
-                        UpdateDestination();
-                    }
-                    else if (Input.GetKeyDown(KeyCode.Alpha2))
                     {
                         textMeshPro_click.text = empty;
                         textMeshPro_instructions.text = empty;
@@ -95,11 +94,7 @@ public class MovementAI : MonoBehaviour
                         IterateWaypointIndex();
                         UpdateDestination();
                     }
-            }
-            else if(waypointIndex == 10){
-                 textMeshPro_click.text = click_value;
-                    textMeshPro_instructions.text = instructions_value;
-                    if (Input.GetKeyDown(KeyCode.Alpha1))
+                    else if (Input.GetKeyDown(KeyCode.Alpha2))
                     {
                         textMeshPro_click.text = empty;
                         textMeshPro_instructions.text = empty;
@@ -107,7 +102,11 @@ public class MovementAI : MonoBehaviour
                         IterateWaypointIndex();
                         UpdateDestination();
                     }
-                    else if (Input.GetKeyDown(KeyCode.Alpha2))
+            }
+            else if(waypointIndex == 12){
+                 textMeshPro_click.text = click_value;
+                    textMeshPro_instructions.text = instructions_value;
+                    if (Input.GetKeyDown(KeyCode.Alpha1))
                     {
                         textMeshPro_click.text = empty;
                         textMeshPro_instructions.text = empty;
@@ -115,6 +114,18 @@ public class MovementAI : MonoBehaviour
                         IterateWaypointIndex();
                         UpdateDestination();
                     }
+                    else if (Input.GetKeyDown(KeyCode.Alpha2))
+                    {
+                        textMeshPro_click.text = empty;
+                        textMeshPro_instructions.text = empty;
+                        waypointIndex = 15;
+                        IterateWaypointIndex();
+                        UpdateDestination();
+                    }
+            }
+            else{
+                IterateWaypointIndex();
+                UpdateDestination();
             }
         }
     }
