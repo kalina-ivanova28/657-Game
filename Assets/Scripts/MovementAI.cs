@@ -41,8 +41,8 @@ public class MovementAI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        agent.speed = 750 * Time.deltaTime;
-        agent.acceleration = 750 * Time.deltaTime;
+        //agent.speed = 750 * Time.deltaTime;
+        //agent.acceleration = 750 * Time.deltaTime;
 
         if(Vector3.Distance(transform.position,target) < 1) //if our distance to the target is less than 1 meter,
         {
