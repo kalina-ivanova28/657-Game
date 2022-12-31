@@ -85,7 +85,7 @@ public class MovementAI : MonoBehaviour
                 
                     textMeshPro_click.text = click_value;
                     textMeshPro_instructions.text = instructions_value;
-                    if (Input.GetKeyDown(KeyCode.Alpha1))              //CHOICE 1 - going straight-> waypointIndex = 9    
+                    if (Input.GetKeyDown(KeyCode.Alpha1))              //CHOICE 1 - going straight-> waypointIndex = 9    LOSE
                     {
                         textMeshPro_click.text = empty;
                         textMeshPro_instructions.text = empty;
@@ -97,8 +97,8 @@ public class MovementAI : MonoBehaviour
                     {
                         textMeshPro_click.text = empty;
                         textMeshPro_instructions.text = empty;
-                        waypointIndex = 11;
-                        IterateWaypointIndex();
+                        waypointIndex = 10;
+                        //IterateWaypointIndex();        This sometimes skips some waypoints...not ndeed in every if statement
                         UpdateDestination();
                     }
             }
@@ -119,13 +119,17 @@ public class MovementAI : MonoBehaviour
                         textMeshPro_click.text = empty;
                         textMeshPro_instructions.text = empty;
                         waypointIndex = 15;
-                        IterateWaypointIndex();
+                        //IterateWaypointIndex();
                         UpdateDestination();
                     }
             }
+            else if(waypointIndex == 15)     
+            {
+                Debug.Log("Just a function to prevent OutOFBoundsIndex Error...TBC...");
+            }
             else if(waypointIndex == 17)     
             {
-                Debug.Log("Juts a function to prevent OutOFBoundsIndex Error");
+                Debug.Log("Just a function to prevent OutOFBoundsIndex Error...TBC...");
             }
             else{                       //mainly for reversing back to a specific waypoint
                 IterateWaypointIndex();
