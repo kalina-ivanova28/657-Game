@@ -98,7 +98,7 @@ public class MovementAI : MonoBehaviour
                         textMeshPro_click.text = empty;
                         textMeshPro_instructions.text = empty;
                         waypointIndex = 10;
-                        //IterateWaypointIndex();        This sometimes skips some waypoints...not ndeed in every if statement
+                        IterateWaypointIndex();        //This sometimes skips some waypoints...not ndeed in every if statement
                         UpdateDestination();
                     }
             }
@@ -119,18 +119,18 @@ public class MovementAI : MonoBehaviour
                         textMeshPro_click.text = empty;
                         textMeshPro_instructions.text = empty;
                         waypointIndex = 15;
-                        //IterateWaypointIndex();
+                        IterateWaypointIndex();
                         UpdateDestination();
                     }
             }
-            else if(waypointIndex == 15)     
-            {
-                Debug.Log("Just a function to prevent OutOFBoundsIndex Error...TBC...");
-            }
-            else if(waypointIndex == 17)     
-            {
-                Debug.Log("Just a function to prevent OutOFBoundsIndex Error...TBC...");
-            }
+            // else if(waypointIndex == 15)     
+            // {
+            //     Debug.Log("Just a function to prevent OutOFBoundsIndex Error...TBC...");
+            // }
+            // else if(waypointIndex == 17)     
+            // {
+            //     Debug.Log("Just a function to prevent OutOFBoundsIndex Error...TBC...");
+            // }
             else{                       //mainly for reversing back to a specific waypoint
                 IterateWaypointIndex();
                 UpdateDestination();
