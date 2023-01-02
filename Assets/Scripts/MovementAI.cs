@@ -18,21 +18,30 @@ public class MovementAI : MonoBehaviour
     //Creating the game objects
     public GameObject click;
     public GameObject instructions;
+    public GameObject Outcome;
 
     //Creating the string values
     public string click_value;
     public string instructions_value;
     public string empty;
+    public string wrong;
+    public string correct;
 
     //Text Components
     TextMeshProUGUI textMeshPro_click;
     TextMeshProUGUI textMeshPro_instructions;
+    TextMeshProUGUI textMeshPro_outcome;
+
+    //Random numbers for Puzzle 1
+    bool flag=false;
+    float number;
 
     // Start is called before the first frame update
     void Start()
     {
         textMeshPro_click = click.GetComponent<TextMeshProUGUI>();
         textMeshPro_instructions = instructions.GetComponent<TextMeshProUGUI>();
+        textMeshPro_outcome= Outcome.GetComponent<TextMeshProUGUI>();
         agent = GetComponent<NavMeshAgent>();
         UpdateDestination(); 
     }
@@ -59,7 +68,7 @@ public class MovementAI : MonoBehaviour
                     UpdateDestination();
                 }
             }
-            else if(waypointIndex == 5)                                               //First Choice after entering
+            else if(waypointIndex == 4)                                               //First Choice after entering
             {
                     textMeshPro_click.text = click_value;
                     textMeshPro_instructions.text = instructions_value;
@@ -76,10 +85,51 @@ public class MovementAI : MonoBehaviour
                         textMeshPro_click.text = empty;
                         textMeshPro_instructions.text = empty;
                         waypointIndex = 16;
-                        IterateWaypointIndex();
+                        //IterateWaypointIndex();
                         UpdateDestination();
                     }
             }
+            // else if(waypointIndex == 16){
+            //     number= Random.Range(0,9);
+            //     while(flag==false){
+            //         if(Input.GetKeyDown(KeyCode.Alpha0) && number == 0){
+            //             flag=true;
+            //         }
+            //         else if(Input.GetKeyDown(KeyCode.Alpha1) && number == 1){
+            //             flag=true;
+            //         }
+            //         else if(Input.GetKeyDown(KeyCode.Alpha2) && number == 2){
+            //             flag=true;
+            //         }
+            //         else if(Input.GetKeyDown(KeyCode.Alpha3) && number == 3){
+            //             flag=true;
+            //         }
+            //         else if(Input.GetKeyDown(KeyCode.Alpha4) && number == 4){
+            //             flag=true;
+            //         }
+            //         else if(Input.GetKeyDown(KeyCode.Alpha5) && number == 5){
+            //             flag=true;
+            //         }
+            //         else if(Input.GetKeyDown(KeyCode.Alpha6) && number == 6){
+            //             flag=true;
+            //         }
+            //         else if(Input.GetKeyDown(KeyCode.Alpha7) && number == 7){
+            //             flag=true;
+            //         }
+            //         else if(Input.GetKeyDown(KeyCode.Alpha8) && number == 8){
+            //             flag=true;
+            //         }
+            //         else if(Input.GetKeyDown(KeyCode.Alpha9) && number == 9){
+            //             flag=true;
+            //         }
+            //         else{
+            //             textMeshPro_outcome.text=wrong;
+            //         }
+            //     }
+            //     textMeshPro_outcome.text=correct;
+            //     IterateWaypointIndex();
+            //     UpdateDestination();
+            // }
             else if(waypointIndex == 7)                                               //waypoint 6
             {
                 
