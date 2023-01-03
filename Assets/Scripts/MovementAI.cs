@@ -19,6 +19,7 @@ public class MovementAI : MonoBehaviour
     public GameObject click;
     public GameObject instructions;
     public GameObject Outcome;
+    public GameObject WeaponMenuChoice1, WeaponMenuChoice2, ConfirmWeapon;
 
     //Creating the string values
     public string click_value;
@@ -27,10 +28,16 @@ public class MovementAI : MonoBehaviour
     public string wrong;
     public string correct;
 
+    //Weapon Display GUI
+    public string weapon_1, weapon_2, confirm;
+
     //Text Components
     TextMeshProUGUI textMeshPro_click;
     TextMeshProUGUI textMeshPro_instructions;
     TextMeshProUGUI textMeshPro_outcome;
+    TextMeshProUGUI textMeshPro_Weapon_1;
+    TextMeshProUGUI textMeshPro_Weapon_2;
+    TextMeshProUGUI confirmWeapon;
 
     //Random numbers for Puzzle 1
     bool flag=false;
@@ -41,8 +48,13 @@ public class MovementAI : MonoBehaviour
     {
         textMeshPro_click = click.GetComponent<TextMeshProUGUI>();
         textMeshPro_instructions = instructions.GetComponent<TextMeshProUGUI>();
-        textMeshPro_outcome= Outcome.GetComponent<TextMeshProUGUI>();
+        textMeshPro_outcome = Outcome.GetComponent<TextMeshProUGUI>();
         agent = GetComponent<NavMeshAgent>();
+
+        //Weapon GUI
+        textMeshPro_Weapon_1 = WeaponMenuChoice1.GetComponent<TextMeshProUGUI>();
+        textMeshPro_Weapon_2 = WeaponMenuChoice2.GetComponent<TextMeshProUGUI>();
+        confirmWeapon = ConfirmWeapon.GetComponent<TextMeshProUGUI>();
         UpdateDestination(); 
     }
 
@@ -62,8 +74,14 @@ public class MovementAI : MonoBehaviour
                 
             }
             else if(waypointIndex == 2){                                              //Entrance choice
+                textMeshPro_Weapon_1.text = weapon_1;
+                textMeshPro_Weapon_2.text = weapon_2;
+                confirmWeapon.text = confirm;
                 if(Input.GetKeyDown(KeyCode.Space)){    //NEEDS GUI INSTRUCTIONS
                     waypointIndex = 3;
+                    textMeshPro_Weapon_1.text = empty;
+                    textMeshPro_Weapon_2.text = empty;
+                    confirmWeapon.text = empty;
                     IterateWaypointIndex();         //+1 to waypoint index
                     UpdateDestination();
                 }
