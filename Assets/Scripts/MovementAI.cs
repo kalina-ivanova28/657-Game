@@ -199,11 +199,13 @@ public class MovementAI : MonoBehaviour
             // {
             //     Debug.Log("Just a function to prevent OutOFBoundsIndex Error...TBC...");
             // }
-            else{                       //mainly for reversing back to a specific waypoint
+            else{                       //if there is no input required... it will follow any remaining waypoints 
+                Debug.Log("Else statement initiated");
                 IterateWaypointIndex();
                 UpdateDestination();
             }
         }
+        else {Debug.Log("Waypoint not in reaching distance...");}
     }
 
 
