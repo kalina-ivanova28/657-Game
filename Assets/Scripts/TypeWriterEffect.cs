@@ -12,11 +12,11 @@ public class TypeWriterEffect : MonoBehaviour
 
     //what will be shown when text has been completely displayed
 
-    private readonly string fullText = "A new Internet trend has become a hit sensation with small live streamers.\n " +
-        "........., a controversial Twitch live streamer, is trying to make a comback after being cancelled.\n" +
-        "He has decided to take part in the What Do I Do?! challenge at an infamous abandoned asylum in his home town.\n" +
-        "........ will have to ask his stream's chat on what he should do at the asylum and go through with whatever the chat agrees on.\n\n" +
-        "This might be be only shot at redemption....";
+    private readonly string fullText = "A new Internet trend has become a hit sensation with small live streamers.\n\n " +
+        "........., a controversial  live streamer, is trying to make a comback after being cancelled.\n\n" +
+        "He has decided to take part in this new challenge at an infamous abandoned asylum in his home town.\n\n" +
+        "........ will have to ask his stream's chat on what he should do at the asylum and go through with whatever the chat agrees on.\n\n\n" +
+        "This might be be only shot at redemption.";
 
     private string currentText = "";
 
@@ -30,11 +30,23 @@ public class TypeWriterEffect : MonoBehaviour
 
     IEnumerator ShowText()  //makes a loop to wait sometime before showing next character
     {
-        for(int i = 0; i < fullText.Length+1; i++)
+
+
+       
+
+        for (int i = 0; i < fullText.Length+1; i++)
         {
             currentText = fullText.Substring(0, i);
             this.GetComponent<Text>().text = currentText;
+            //var text = GetComponent<Text>();
+            //if (text == null)
+            //{
+            //    Debug.LogWarning("expected text was null!");
+
+            //}
             yield return new WaitForSeconds(delay);
         }
+
+     
     }
 }
