@@ -50,7 +50,7 @@ public class MovementAI : MonoBehaviour
         textMeshPro_instructions = instructions.GetComponent<TextMeshProUGUI>();
         textMeshPro_outcome = Outcome.GetComponent<TextMeshProUGUI>();
         agent = GetComponent<NavMeshAgent>();
-        number= Random.Range(0,9);
+        
 
         //Weapon GUI
         textMeshPro_Weapon_1 = WeaponMenuChoice1.GetComponent<TextMeshProUGUI>();
@@ -109,45 +109,8 @@ public class MovementAI : MonoBehaviour
                     }
             }
             // else if(waypointIndex == 15){
-                
-            //     while(flag==false){
-            //         if(Input.GetKeyDown(KeyCode.Alpha0) && number == 0){
-            //             flag=true;
-            //         }
-            //         else if(Input.GetKeyDown(KeyCode.Alpha1) && number == 1){
-            //             flag=true;
-            //         }
-            //         else if(Input.GetKeyDown(KeyCode.Alpha2) && number == 2){
-            //             flag=true;
-            //         }
-            //         else if(Input.GetKeyDown(KeyCode.Alpha3) && number == 3){
-            //             flag=true;
-            //         }
-            //         else if(Input.GetKeyDown(KeyCode.Alpha4) && number == 4){
-            //             flag=true;
-            //         }
-            //         else if(Input.GetKeyDown(KeyCode.Alpha5) && number == 5){
-            //             flag=true;
-            //         }
-            //         else if(Input.GetKeyDown(KeyCode.Alpha6) && number == 6){
-            //             flag=true;
-            //         }
-            //         else if(Input.GetKeyDown(KeyCode.Alpha7) && number == 7){
-            //             flag=true;
-            //         }
-            //         else if(Input.GetKeyDown(KeyCode.Alpha8) && number == 8){
-            //             flag=true;
-            //         }
-            //         else if(Input.GetKeyDown(KeyCode.Alpha9) && number == 9){
-            //             flag=true;
-            //         }
-            //         else{
-            //             textMeshPro_outcome.text=wrong;
-            //         }
-            //     }
-            //     textMeshPro_outcome.text=correct;
-            //     IterateWaypointIndex();
-            //     UpdateDestination();
+                //GuessingGame()    
+            
             // }
             else if(waypointIndex == 7)                                               //waypoint 6
             {
@@ -272,6 +235,47 @@ public class MovementAI : MonoBehaviour
         waypointIndex++;
       
     }
+    // void GuessingGame(){
+            //number= Random.Range(0,9);
+    //     while(flag==false){
+            //         if(Input.GetKeyDown(KeyCode.Alpha0) && number == 0){
+            //             flag=true;
+            //         }
+            //         else if(Input.GetKeyDown(KeyCode.Alpha1) && number == 1){
+            //             flag=true;
+            //         }
+            //         else if(Input.GetKeyDown(KeyCode.Alpha2) && number == 2){
+            //             flag=true;
+            //         }
+            //         else if(Input.GetKeyDown(KeyCode.Alpha3) && number == 3){
+            //             flag=true;
+            //         }
+            //         else if(Input.GetKeyDown(KeyCode.Alpha4) && number == 4){
+            //             flag=true;
+            //         }
+            //         else if(Input.GetKeyDown(KeyCode.Alpha5) && number == 5){
+            //             flag=true;
+            //         }
+            //         else if(Input.GetKeyDown(KeyCode.Alpha6) && number == 6){
+            //             flag=true;
+            //         }
+            //         else if(Input.GetKeyDown(KeyCode.Alpha7) && number == 7){
+            //             flag=true;
+            //         }
+            //         else if(Input.GetKeyDown(KeyCode.Alpha8) && number == 8){
+            //             flag=true;
+            //         }
+            //         else if(Input.GetKeyDown(KeyCode.Alpha9) && number == 9){
+            //             flag=true;
+            //         }
+            //         else{
+            //             textMeshPro_outcome.text=wrong;
+            //         }
+            //     }
+            //     textMeshPro_outcome.text=correct;
+            //     IterateWaypointIndex();
+            //     UpdateDestination();
+    //}
 }
 
 
