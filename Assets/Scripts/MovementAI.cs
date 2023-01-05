@@ -40,8 +40,8 @@ public class MovementAI : MonoBehaviour
     TextMeshProUGUI confirmWeapon;
 
     //Random numbers for Puzzle 1
-    bool flag=false;
-    float number;
+    public bool flag = false;
+    float number = 1;
 
     // Start is called before the first frame update
     void Start()
@@ -62,9 +62,6 @@ public class MovementAI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //agent.speed = 750 * Time.deltaTime;
-        //agent.acceleration = 750 * Time.deltaTime;
-
         if(Vector3.Distance(transform.position, target) < 1) //if our distance to the target is less than 1 meter,
         {
             
@@ -108,10 +105,12 @@ public class MovementAI : MonoBehaviour
                         UpdateDestination();
                     }
             }
-            // else if(waypointIndex == 15){
-                //GuessingGame()    
-            
-            // }
+            else if(waypointIndex == 15)
+            {
+                    Debug.Log("Waypoint 15 reached");
+                    //GuessingGame();    
+
+            }
             else if(waypointIndex == 7)                                               //waypoint 6
             {
                 
@@ -235,47 +234,62 @@ public class MovementAI : MonoBehaviour
         waypointIndex++;
       
     }
-    // void GuessingGame(){
-            //number= Random.Range(0,9);
-    //     while(flag==false){
-            //         if(Input.GetKeyDown(KeyCode.Alpha0) && number == 0){
-            //             flag=true;
-            //         }
-            //         else if(Input.GetKeyDown(KeyCode.Alpha1) && number == 1){
-            //             flag=true;
-            //         }
-            //         else if(Input.GetKeyDown(KeyCode.Alpha2) && number == 2){
-            //             flag=true;
-            //         }
-            //         else if(Input.GetKeyDown(KeyCode.Alpha3) && number == 3){
-            //             flag=true;
-            //         }
-            //         else if(Input.GetKeyDown(KeyCode.Alpha4) && number == 4){
-            //             flag=true;
-            //         }
-            //         else if(Input.GetKeyDown(KeyCode.Alpha5) && number == 5){
-            //             flag=true;
-            //         }
-            //         else if(Input.GetKeyDown(KeyCode.Alpha6) && number == 6){
-            //             flag=true;
-            //         }
-            //         else if(Input.GetKeyDown(KeyCode.Alpha7) && number == 7){
-            //             flag=true;
-            //         }
-            //         else if(Input.GetKeyDown(KeyCode.Alpha8) && number == 8){
-            //             flag=true;
-            //         }
-            //         else if(Input.GetKeyDown(KeyCode.Alpha9) && number == 9){
-            //             flag=true;
-            //         }
-            //         else{
-            //             textMeshPro_outcome.text=wrong;
-            //         }
-            //     }
-            //     textMeshPro_outcome.text=correct;
-            //     IterateWaypointIndex();
-            //     UpdateDestination();
-    //}
+    void GuessingGame()
+    {
+        //number = Random.Range(0,2);
+        Debug.Log("Number generated: " + number);
+        textMeshPro_instructions.text = "Choose a number between 1 - 9";
+        if (flag == false)
+            {
+                if(Input.GetKeyDown(KeyCode.Alpha0) && number == 0){
+                    flag=true;
+                    textMeshPro_instructions.text = empty;
+                    Debug.Log("Correct!");
+                    IterateWaypointIndex();
+                    UpdateDestination();
+                }
+                else if(Input.GetKeyDown(KeyCode.Alpha1) && number == 1){
+                    flag=true;
+                    textMeshPro_instructions.text = empty;
+                    Debug.Log("Correct!");
+                    IterateWaypointIndex();
+                    UpdateDestination();
+                }
+                else if(Input.GetKeyDown(KeyCode.Alpha2) && number == 2){
+                    flag=true;
+                    textMeshPro_instructions.text = empty;
+                    Debug.Log("Correct!");
+                    IterateWaypointIndex();
+                    UpdateDestination();
+                }
+
+
+                else if(Input.GetKeyDown(KeyCode.Alpha3) && number == 3){
+                    flag=true;
+                }
+                else if(Input.GetKeyDown(KeyCode.Alpha4) && number == 4){
+                    flag=true;
+                }
+                else if(Input.GetKeyDown(KeyCode.Alpha5) && number == 5){
+                    flag=true;
+                }
+                else if(Input.GetKeyDown(KeyCode.Alpha6) && number == 6){
+                    flag=true;
+                }
+                else if(Input.GetKeyDown(KeyCode.Alpha7) && number == 7){
+                    flag=true;
+                }
+                else if(Input.GetKeyDown(KeyCode.Alpha8) && number == 8){
+                    flag=true;
+                }
+                else if(Input.GetKeyDown(KeyCode.Alpha9) && number == 9){
+                    flag=true;
+                }
+                else{
+                    textMeshPro_outcome.text=wrong;
+                }
+            }
+    }
 }
 
 
