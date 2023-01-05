@@ -50,6 +50,7 @@ public class MovementAI : MonoBehaviour
         textMeshPro_instructions = instructions.GetComponent<TextMeshProUGUI>();
         textMeshPro_outcome = Outcome.GetComponent<TextMeshProUGUI>();
         agent = GetComponent<NavMeshAgent>();
+        number= Random.Range(0,9);
 
         //Weapon GUI
         textMeshPro_Weapon_1 = WeaponMenuChoice1.GetComponent<TextMeshProUGUI>();
@@ -102,13 +103,13 @@ public class MovementAI : MonoBehaviour
                     {
                         textMeshPro_click.text = empty;
                         textMeshPro_instructions.text = empty;
-                        waypointIndex = 16;
+                        waypointIndex = 15;
                         //IterateWaypointIndex();
                         UpdateDestination();
                     }
             }
-            // else if(waypointIndex == 16){
-            //     number= Random.Range(0,9);
+            // else if(waypointIndex == 15){
+                
             //     while(flag==false){
             //         if(Input.GetKeyDown(KeyCode.Alpha0) && number == 0){
             //             flag=true;
@@ -158,7 +159,7 @@ public class MovementAI : MonoBehaviour
                         textMeshPro_click.text = empty;
                         textMeshPro_instructions.text = empty;
                         waypointIndex = 8;
-                        IterateWaypointIndex();
+                        //IterateWaypointIndex();
                         UpdateDestination();
                     }
                     else if (Input.GetKeyDown(KeyCode.Alpha2))         //CHOICE 2 - going to the right -> waypointIndex = 12
@@ -166,36 +167,84 @@ public class MovementAI : MonoBehaviour
                         textMeshPro_click.text = empty;
                         textMeshPro_instructions.text = empty;
                         waypointIndex = 10;
-                        IterateWaypointIndex();        //This sometimes skips some waypoints...not ndeed in every if statement
+                        IterateWaypointIndex();        //This sometimes skips some waypoints...not needed in every if statement
                         UpdateDestination();
                     }
             }
             else if(waypointIndex == 12)                                               //
             {
-                 textMeshPro_click.text = click_value;
-                    textMeshPro_instructions.text = instructions_value;
-                    if (Input.GetKeyDown(KeyCode.Alpha1))
-                    {
-                        textMeshPro_click.text = empty;
-                        textMeshPro_instructions.text = empty;
-                        waypointIndex = 13;
-                        IterateWaypointIndex();
-                        UpdateDestination();
-                    }
-                    else if (Input.GetKeyDown(KeyCode.Alpha2))
-                    {
-                        textMeshPro_click.text = empty;
-                        textMeshPro_instructions.text = empty;
-                        waypointIndex = 15;
-                        IterateWaypointIndex();
-                        UpdateDestination();
-                    }
+                textMeshPro_click.text = click_value;
+                textMeshPro_instructions.text = instructions_value;
+                if (Input.GetKeyDown(KeyCode.Alpha1))
+                {
+                    textMeshPro_click.text = empty;
+                    textMeshPro_instructions.text = empty;
+                    waypointIndex = 13;
+                    IterateWaypointIndex();
+                    UpdateDestination();
+                }
+                else if (Input.GetKeyDown(KeyCode.Alpha2))
+                {
+                    textMeshPro_click.text = empty;
+                    textMeshPro_instructions.text = empty;
+                    waypointIndex = 16;
+                    //IterateWaypointIndex();
+                    UpdateDestination();
+                }
             }
-            // else if(waypointIndex == 15)     
-            // {
-            //     Debug.Log("Just a function to prevent OutOFBoundsIndex Error...TBC...");
-            // }
-            // else if(waypointIndex == 17)     
+            else if (waypointIndex == 22){
+                textMeshPro_click.text = click_value;
+                textMeshPro_instructions.text = instructions_value;
+                if (Input.GetKeyDown(KeyCode.Alpha1))
+                {
+                    textMeshPro_click.text = empty;
+                    textMeshPro_instructions.text = empty;
+                    waypointIndex=23;
+                    // IterateWaypointIndex();
+                    UpdateDestination();
+                    Debug.Log("Got here I think");
+                }
+                else if (Input.GetKeyDown(KeyCode.Alpha2))
+                {
+                    textMeshPro_click.text = empty;
+                    textMeshPro_instructions.text = empty;
+                    waypointIndex = 24;
+                    //IterateWaypointIndex();
+                    UpdateDestination();
+                    Debug.Log("The problem is here");
+                }
+            }
+            // else if(waypointIndex == 23){
+            //     waypointIndex = 25;
+            //     Debug.Log("It got here");
+            //     UpdateDestination();
+            // } 
+            else if(waypointIndex == 26){
+                Debug.Log("Here");
+                textMeshPro_click.text = click_value;
+                textMeshPro_instructions.text = instructions_value;
+                if (Input.GetKeyDown(KeyCode.Alpha1))
+                {
+                    textMeshPro_click.text = empty;
+                    textMeshPro_instructions.text = empty;
+                    waypointIndex = 27;
+                    // IterateWaypointIndex();
+                    UpdateDestination();
+                }
+                else if (Input.GetKeyDown(KeyCode.Alpha2))
+                {
+                    textMeshPro_click.text = empty;
+                    textMeshPro_instructions.text = empty;
+                    waypointIndex = 28;
+                    IterateWaypointIndex();
+                    UpdateDestination();
+                }
+            }
+            else if (waypointIndex == 27){
+                waypointIndex = 21;
+                UpdateDestination();
+            }
+            // else if(waypointIndex == 29)     
             // {
             //     Debug.Log("Just a function to prevent OutOFBoundsIndex Error...TBC...");
             // }
@@ -205,7 +254,7 @@ public class MovementAI : MonoBehaviour
                 UpdateDestination();
             }
         }
-        else {Debug.Log("Waypoint not in reaching distance...");}
+        //else {Debug.Log("Waypoint not in reaching distance...");}
     }
 
 
