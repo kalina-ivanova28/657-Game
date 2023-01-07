@@ -198,7 +198,7 @@ public class MovementAI : MonoBehaviour
                     textMeshPro_click.text = empty;
                     textMeshPro_instructions.text = empty;
                     waypointIndex = 28;
-                    IterateWaypointIndex();
+                    IterateWaypointIndex(); //need to comment this out otherwise it will skip the puzzlegame
                     UpdateDestination();
                 }
                 Debug.Log("26");
