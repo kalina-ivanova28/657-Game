@@ -1204,7 +1204,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   changeTime: 20.15
-  sceneName: SampleScene
 --- !u!4 &137428508
 Transform:
   m_ObjectHideFlags: 0
