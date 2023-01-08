@@ -10,6 +10,6 @@ public class SceneChangeViaTriggerWIN : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         Debug.Log("triggered");
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene("WinScene");
     }
 }

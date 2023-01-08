@@ -12,11 +12,11 @@ public class TypeWriterEffect : MonoBehaviour
 
     //what will be shown when text has been completely displayed
 
-    private readonly string fullText = "A new Internet trend has become a hit sensation with small live streamers.\n\n " +
-        "........., a controversial  live streamer, is trying to make a comback after being cancelled.\n\n" +
-        "He has decided to take part in this new challenge at an infamous abandoned asylum in his home town.\n\n" +
-        "........ will have to ask his stream's chat on what he should do at the asylum and go through with whatever the chat agrees on.\n\n\n" +
-        "This might be be only shot at redemption.";
+    private readonly string fullText = "A new Internet trend has become a hit sensation with indie livestreamers all over the world.\n\n " +
+        ".........\n\nChatmaster has returned after being cancelled by the netizens.\n\n" +
+        "He has decided to challenge the infamous abandoned asylum in his home town in hopes to reclaim his fame.\n\n" +
+        "........\n\n and only the Chat can tell him what to do.\n\n........\n\n" +
+        "This might be his only shot at redemption.";
 
     private string currentText = "";
 

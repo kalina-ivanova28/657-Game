@@ -10,6 +10,6 @@ public class SceneChangeViaTriggerLOSE : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         Debug.Log("triggered");
-        SceneManager.LoadScene(3);
+        SceneManager.LoadScene("GameOverScene");
     }
 }
