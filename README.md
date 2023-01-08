@@ -36,6 +36,23 @@ https://assetstore.unity.com/packages/3d/environments/landscapes/terrain-sample-
 Moon texture:
 https://imgur.com/a/aw3nD
 
+LowlyPoly, Hand Painted Grass Texture. Available at: https://assetstore.unity.com/packages/2d/textures-materials/floors/hand-painted-grass-texture-78552
+
+Casual2D, Wooden Floor Materials. Available at: https://assetstore.unity.com/packages/2d/textures-materials/wood/wooden-floor-materials-150564
+
+Alessio Regalbuto, High Quality Bricks & Walls. Available at: https://assetstore.unity.com/packages/2d/textures-materials/brick/high-quality-bricks-walls-49581
+
+LowlyPoly, Stylized Terrain Texture. Available at: https://assetstore.unity.com/packages/2d/textures-materials/floors/stylized-terrain-texture-153469
+
+Pixel Games, Realistic Tree 9 [Rainbow Tree]. Available at: https://assetstore.unity.com/packages/3d/vegetation/trees/realistic-tree-9-rainbow-tree-54622
+
+Reinforcedcc, Free Industrial building/garage. Available at: https://assetstore.unity.com/packages/3d/environments/industrial/free-industrial-building-garage-123146
+
+DEXSOFT, Furniture FREE Pack. Available at: Available at: https://assetstore.unity.com/packages/3d/props/furniture/furniture-free-pack-192628
+
+AmbiMesh, Raw Wooden Furniture Free. Available at: https://assetstore.unity.com/packages/3d/props/furniture/raw-wooden-furniture-free-166329
+
+
 #################################################################################################
 Assets self-created:
 #################################################################################################
