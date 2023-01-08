@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using TMPro;
 
 public class Gun : MonoBehaviour
 {
@@ -8,12 +9,14 @@ public class Gun : MonoBehaviour
     public float fireRate;
     private float nextTimeToFire = 0f;
 
+    public TextMeshProUGUI ammoText;
+
     public Camera fpsCam;
     public ParticleSystem muzzleFlash;
 
     //Ammo + reloading
     public int maxAmmo;
-    private int currentAmmo;
+    public int currentAmmo;
     public float reloadTime = 1f;
     private bool isReloading = false;
 
@@ -45,6 +48,7 @@ public class Gun : MonoBehaviour
             nextTimeToFire = Time.time + 1f/fireRate;
             Shoot();
         }
+        ammoText.text = "Ammo: " + currentAmmo.ToString() + "/ ∞";
         
     }
 
@@ -52,6 +56,7 @@ public class Gun : MonoBehaviour
     {
         isReloading = true;
         Debug.Log("Reloading...");
+        ammoText.text = "Reloading..";
 
         yield return new WaitForSeconds(reloadTime);
 

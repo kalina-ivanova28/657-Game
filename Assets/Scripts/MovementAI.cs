@@ -320,11 +320,13 @@ public class MovementAI : MonoBehaviour
             }
     }
 
-    void MoveWall(){
-        textMeshPro_instructions.text = "Press the left arrow to open door";
-        for (int i=0;i<10;i++){
-            Debug.Log(i);
-        }
+    void MoveWall()
+    {
+        Vector3 x = new Vector3();
+        Vector3 y = new Vector3();
+        x.z = 8;
+        y.z = 13;
+        MovingWall.transform.position = Vector3.Lerp(x, y, 5);
     }
 }
 

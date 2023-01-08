@@ -21,8 +21,6 @@ public class openDoor : MonoBehaviour
     void Open(){
         target = waypointArray[0].position; //set our target to our current waypoint
 
-        //target = Vector2.MoveTowards(transform.position, waypoints[waypointIndex].position, Time.deltaTime * 10); //set our target to our current waypoint
-
         agent1.SetDestination(target); 
     }
 }
