@@ -28,7 +28,6 @@ public class MovementAI : MonoBehaviour
     public string empty;
     public string wrong;
     public string correct;
-    private float movementSpeed = 5f;
     public float position;
 
     //Weapon Display GUI
@@ -73,21 +72,21 @@ public class MovementAI : MonoBehaviour
             {
                 IterateWaypointIndex();         //we are going to increase the waypoint index by 1
                 UpdateDestination();            //updates the destination waypoint
-                Debug.Log("<2");
+                agent.speed = 7;
             }
             else if(waypointIndex == 2){                                              //Entrance choice
                 textMeshPro_Weapon_1.text = weapon_1;
                 textMeshPro_Weapon_2.text = weapon_2;
                 confirmWeapon.text = confirm;
-                if(Input.GetKeyDown(KeyCode.Space)){    //NEEDS GUI INSTRUCTIONS
+                if(Input.GetKeyDown(KeyCode.Space)){    //After selecting a weapon or none and heading into the building
                     waypointIndex = 3;
                     textMeshPro_Weapon_1.text = empty;
                     textMeshPro_Weapon_2.text = empty;
                     confirmWeapon.text = empty;
-                    IterateWaypointIndex();         //+1 to waypoint index
+                    IterateWaypointIndex();         
                     UpdateDestination();
+                    agent.speed = 10;
                 }
-                Debug.Log("2");
             }
             else if(waypointIndex == 4)                                               //First Choice after entering
             {
@@ -100,6 +99,7 @@ public class MovementAI : MonoBehaviour
                         waypointIndex = 6;
                         IterateWaypointIndex();
                         UpdateDestination();
+                        agent.speed = 12;
                     }
                     else if (Input.GetKeyDown(KeyCode.Alpha2))         //CHOICE 2 - going to the right -> waypointIndex = 17
                     {
@@ -108,8 +108,8 @@ public class MovementAI : MonoBehaviour
                         waypointIndex = 15;
                         //IterateWaypointIndex();
                         UpdateDestination();
+                        agent.speed = 12;
                     }
-                    Debug.Log("4");
             }
             else if(waypointIndex == 7)                                               //waypoint 6
             {
@@ -132,7 +132,6 @@ public class MovementAI : MonoBehaviour
                         IterateWaypointIndex();        //This sometimes skips some waypoints...not needed in every if statement
                         UpdateDestination();
                     }
-                    Debug.Log("7");
             }
             else if(waypointIndex == 12)                                               
             {
@@ -154,7 +153,6 @@ public class MovementAI : MonoBehaviour
                     //IterateWaypointIndex();
                     UpdateDestination();
                 }
-                Debug.Log("12");
             }
             else if (waypointIndex == 22){
                 textMeshPro_click.text = click_value;
@@ -177,7 +175,6 @@ public class MovementAI : MonoBehaviour
                     UpdateDestination();
                     //Debug.Log("The problem is here");
                 }
-                Debug.Log("22");
             }
             else if(waypointIndex == 26){
                 //Debug.Log("Here");
@@ -199,17 +196,14 @@ public class MovementAI : MonoBehaviour
                     //IterateWaypointIndex(); //need to comment this out otherwise it will skip the puzzlegame
                     UpdateDestination();
                 }
-                Debug.Log("26");
             }
             else if (waypointIndex == 27){
                 waypointIndex = 21;
                 UpdateDestination();
-                Debug.Log("27");
             }
             else if(waypointIndex == 28){
                 Debug.Log("Waypoint 28 reached");
                 GuessingGame();
-                Debug.Log("28"); 
             }
             else if(waypointIndex == 30){
                 Debug.Log("End of waypoints reached");
@@ -227,8 +221,6 @@ public class MovementAI : MonoBehaviour
     void UpdateDestination()
     {
         target = waypoints[waypointIndex].position; //set our target to our current waypoint
-
-        //target = Vector2.MoveTowards(transform.position, waypoints[waypointIndex].position, Time.deltaTime * 10); //set our target to our current waypoint
 
         agent.SetDestination(target);               //set the nav mesh agent's destination to target
     }
@@ -324,9 +316,6 @@ public class MovementAI : MonoBehaviour
                     MoveWall();
                     IterateWaypointIndex();
                     UpdateDestination();
-                }
-                else{
-                    textMeshPro_outcome.text=wrong;
                 }
             }
     }
