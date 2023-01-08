@@ -20,6 +20,7 @@ public class MovementAI : MonoBehaviour
     public GameObject instructions;
     public GameObject Outcome;
     public GameObject WeaponMenuChoice1, WeaponMenuChoice2, ConfirmWeapon;
+    public GameObject MovingWall;
 
     //Creating the string values
     public string click_value;
@@ -27,6 +28,8 @@ public class MovementAI : MonoBehaviour
     public string empty;
     public string wrong;
     public string correct;
+    private float movementSpeed = 5f;
+    public float position;
 
     //Weapon Display GUI
     public string weapon_1, weapon_2, confirm;
@@ -140,7 +143,7 @@ public class MovementAI : MonoBehaviour
                     textMeshPro_click.text = empty;
                     textMeshPro_instructions.text = empty;
                     waypointIndex = 13;
-                    IterateWaypointIndex();
+                    //IterateWaypointIndex();
                     UpdateDestination();
                 }
                 else if (Input.GetKeyDown(KeyCode.Alpha2))
@@ -176,11 +179,6 @@ public class MovementAI : MonoBehaviour
                 }
                 Debug.Log("22");
             }
-            // else if(waypointIndex == 24){
-            //     waypointIndex = 25;
-            //     UpdateDestination();
-            //     Debug.Log("It got here");
-            // } 
             else if(waypointIndex == 26){
                 //Debug.Log("Here");
                 textMeshPro_click.text = click_value;
@@ -208,14 +206,13 @@ public class MovementAI : MonoBehaviour
                 UpdateDestination();
                 Debug.Log("27");
             }
-            // else if(waypointIndex == 29)     
-            // {
-            //     Debug.Log("Just a function to prevent OutOFBoundsIndex Error...TBC...");
-            // }
             else if(waypointIndex == 28){
                 Debug.Log("Waypoint 28 reached");
                 GuessingGame();
                 Debug.Log("28"); 
+            }
+            else if(waypointIndex == 30){
+                Debug.Log("End of waypoints reached");
             }
             else{                       //if there is no input required... it will follow any remaining waypoints 
                 Debug.Log("Else statement initiated");
@@ -252,6 +249,7 @@ public class MovementAI : MonoBehaviour
                     flag=true;
                     textMeshPro_instructions.text = empty;
                     Debug.Log("Correct!");
+                    MoveWall();
                     IterateWaypointIndex();
                     UpdateDestination();
                 }
@@ -259,6 +257,7 @@ public class MovementAI : MonoBehaviour
                     flag=true;
                     textMeshPro_instructions.text = empty;
                     Debug.Log("Correct!");
+                    MoveWall();
                     IterateWaypointIndex();
                     UpdateDestination();
                 }
@@ -266,6 +265,7 @@ public class MovementAI : MonoBehaviour
                     flag=true;
                     textMeshPro_instructions.text = empty;
                     Debug.Log("Correct!");
+                    MoveWall();
                     IterateWaypointIndex();
                     UpdateDestination();
                 }
@@ -273,6 +273,7 @@ public class MovementAI : MonoBehaviour
                     flag=true;
                     textMeshPro_instructions.text = empty;
                     Debug.Log("Correct!");
+                    MoveWall();
                     IterateWaypointIndex();
                     UpdateDestination();
                 }
@@ -280,6 +281,7 @@ public class MovementAI : MonoBehaviour
                     flag=true;
                     textMeshPro_instructions.text = empty;
                     Debug.Log("Correct!");
+                    MoveWall();
                     IterateWaypointIndex();
                     UpdateDestination();
                 }
@@ -287,6 +289,7 @@ public class MovementAI : MonoBehaviour
                     flag=true;
                     textMeshPro_instructions.text = empty;
                     Debug.Log("Correct!");
+                    MoveWall();
                     IterateWaypointIndex();
                     UpdateDestination();
                 }
@@ -294,6 +297,7 @@ public class MovementAI : MonoBehaviour
                     flag=true;
                     textMeshPro_instructions.text = empty;
                     Debug.Log("Correct!");
+                    MoveWall();
                     IterateWaypointIndex();
                     UpdateDestination();
                 }
@@ -301,6 +305,7 @@ public class MovementAI : MonoBehaviour
                     flag=true;
                     textMeshPro_instructions.text = empty;
                     Debug.Log("Correct!");
+                    MoveWall();
                     IterateWaypointIndex();
                     UpdateDestination();
                 }
@@ -308,6 +313,7 @@ public class MovementAI : MonoBehaviour
                     flag=true;
                     textMeshPro_instructions.text = empty;
                     Debug.Log("Correct!");
+                    MoveWall();
                     IterateWaypointIndex();
                     UpdateDestination();
                 }
@@ -315,6 +321,7 @@ public class MovementAI : MonoBehaviour
                     flag=true;
                     textMeshPro_instructions.text = empty;
                     Debug.Log("Correct!");
+                    MoveWall();
                     IterateWaypointIndex();
                     UpdateDestination();
                 }
@@ -322,6 +329,13 @@ public class MovementAI : MonoBehaviour
                     textMeshPro_outcome.text=wrong;
                 }
             }
+    }
+
+    void MoveWall(){
+        textMeshPro_instructions.text = "Press the left arrow to open door";
+        for (int i=0;i<10;i++){
+            Debug.Log(i);
+        }
     }
 }
 
