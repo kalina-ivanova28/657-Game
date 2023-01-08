@@ -18,6 +18,9 @@ https://www.youtube.com/watch?v=c8Nq19gkNfs
 Cutscenes:
 https://www.youtube.com/watch?v=Zb5GxSz5mSI&t=236s
 
+Main Menu:
+https://youtu.be/zc8ac_qUXQY
+
 #################################################################################################
 Assets used:
 #################################################################################################
@@ -29,6 +32,9 @@ https://assetstore.unity.com/packages/2d/textures-materials/sky/skybox-series-fr
 
 Terrain materials:
 https://assetstore.unity.com/packages/3d/environments/landscapes/terrain-sample-asset-pack-145808
+
+Moon texture:
+https://imgur.com/a/aw3nD
 
 #################################################################################################
 Assets self-created:
