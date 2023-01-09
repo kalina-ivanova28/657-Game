@@ -8,6 +8,7 @@ public class Gun : MonoBehaviour
     public float range = 10f;
     public float fireRate;
     private float nextTimeToFire = 0f;
+    public AudioSource gunSound;
 
     public TextMeshProUGUI ammoText;
 
@@ -23,6 +24,7 @@ public class Gun : MonoBehaviour
     void Start() 
     {
         currentAmmo = maxAmmo;
+        gunSound = GetComponent<AudioSource>();
     }
 
     void OnEnable ()
@@ -45,6 +47,7 @@ public class Gun : MonoBehaviour
         if (Input.GetButton("Fire1") && Time.time >= nextTimeToFire) 
         {
             muzzleFlash.Emit(10);    
+            gunSound.Play();
             nextTimeToFire = Time.time + 1f/fireRate;
             Shoot();
         }
